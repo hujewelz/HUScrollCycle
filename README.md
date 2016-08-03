@@ -19,15 +19,15 @@
 ```swift
 cycleView.placeholderImage = UIImage(named:"a.jpg")
 cycleView.imageURLStringGroup = ["http://1.7feel.cc/yungou/statics/uploads/banner/20160715/85964915563838.jpg",
-                                         "http://1.7feel.cc/yungou/statics/uploads/banner/20160715/20274054563730.jpg",
-                                         "http://1.7feel.cc/yungou/statics/uploads/banner/20160715/40912708563719.jpg",
-                                         "http://1.7feel.cc/yungou/statics/uploads/touimg/20160718/img193.jpg"];
+                                 "http://1.7feel.cc/yungou/statics/uploads/banner/20160715/20274054563730.jpg",
+                                 "http://1.7feel.cc/yungou/statics/uploads/banner/20160715/40912708563719.jpg",
+                                 "http://1.7feel.cc/yungou/statics/uploads/touimg/20160718/img193.jpg"];
 ```
 
 在代理中，你可以得到当前点击图片的下标：
 
 ```swift
-func cycleView(view: HUScrollCycleView, didSelectedItemAtIndex index: Int) {
+func scrollCycleView(view: HUScrollCycleView, didSelectedItemAtIndex index: Int) {
         print("tap at \(index)")
 }
 ```
