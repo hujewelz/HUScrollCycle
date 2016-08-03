@@ -31,7 +31,7 @@ class ViewController: UIViewController, HUScrollCycleViewDelegate {
 
     //MARK: HUScrollCycleViewDelegate
     
-    func cycleView(view: HUScrollCycleView, didSelectedItemAtIndex index: Int) {
+    func scrollCycleView(view: HUScrollCycleView, didSelectedItemAtIndex index: Int) {
         print("tap at \(index)")
     }
 

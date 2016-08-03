@@ -9,11 +9,10 @@
  }
         
  let cycleView = HUScrollCycleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200))
- self.view.addSubview(cycleView)
  cycleView.delegate = self
  cycleView.images = images
  cycleView.currentPageIndicatorTintColor = UIColor.redColor()
-        
+ self.view.addSubview(cycleView)    
 ```
 加载网络图片：
 

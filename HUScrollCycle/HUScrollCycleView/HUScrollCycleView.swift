@@ -10,7 +10,7 @@ import UIKit
 
 @objc public protocol HUScrollCycleViewDelegate: NSObjectProtocol {
     
-    optional func cycleView(view: HUScrollCycleView, didSelectedItemAtIndex index: Int)
+    optional func scrollCycleView(view: HUScrollCycleView, didSelectedItemAtIndex index: Int)
 }
 
 
@@ -161,7 +161,7 @@ public class HUScrollCycleView: UIView {
     
     @objc private func tapGesterHandelr(sender: UITapGestureRecognizer) {
         if sender.state == .Ended {
-            delegate?.cycleView?(self, didSelectedItemAtIndex: index)
+            delegate?.scrollCycleView?(self, didSelectedItemAtIndex: index)
            
         }
     }
