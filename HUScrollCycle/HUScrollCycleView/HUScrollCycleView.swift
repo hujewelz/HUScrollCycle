@@ -104,12 +104,11 @@ public class HUScrollCycleView: UIView {
     
     public override func willMoveToWindow(newWindow: UIWindow?) {
         super.willMoveToWindow(newWindow)
-        
+        self.imageView.layer.removeAllAnimations()
         guard let _ = newWindow else {
             stopTimer()
             return
         }
-        
         refreshTimer()
     }
     
@@ -186,14 +185,11 @@ public class HUScrollCycleView: UIView {
         switch direction {
         case .Left:
             index += 1
-            
             if index > imageCounts - 1 {
                 index = 0
             }
-
         case .Right:
             index -= 1
-            
             if index < 0 {
                 index = imageCounts - 1
             }
@@ -215,6 +211,7 @@ public class HUScrollCycleView: UIView {
         let animation = CATransition()
         animation.duration = 0.4
         animation.type = kCATransitionPush
+        
         switch direction {
         case .Left:
             animation.subtype = kCATransitionFromRight
