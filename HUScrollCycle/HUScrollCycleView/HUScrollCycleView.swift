@@ -86,7 +86,7 @@ public class HUScrollCycleView: UIView {
         case Left, Right
     }
     
-     //MARK: life cycle
+    //MARK: life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -148,9 +148,9 @@ public class HUScrollCycleView: UIView {
         if sender.state == .Ended {
             switch sender.direction {
             case UISwipeGestureRecognizerDirection.Left:
-                scrollLeft()
+                scrollWithDirection(.Left)
             case UISwipeGestureRecognizerDirection.Right:
-                scrollRight()
+                scrollWithDirection(.Right)
             default:
                 break
             }
@@ -179,14 +179,24 @@ public class HUScrollCycleView: UIView {
     }
     
     @objc private func timeAction() {
-        scrollLeft()
+        scrollWithDirection(.Left)
     }
     
-    private func scrollLeft() {
-        index += 1
-        
-        if index > imageCounts - 1 {
-            index = 0
+    private func scrollWithDirection(direction: ScrollDirection) {
+        switch direction {
+        case .Left:
+            index += 1
+            
+            if index > imageCounts - 1 {
+                index = 0
+            }
+
+        case .Right:
+            index -= 1
+            
+            if index < 0 {
+                index = imageCounts - 1
+            }
         }
         
         if images.count > 0 {
@@ -198,26 +208,7 @@ public class HUScrollCycleView: UIView {
             }
         }
         
-        addScrollAnimationWithDirection(.Left)
-    }
-    
-    private func scrollRight() {
-        index -= 1
-        
-        if index < 0 {
-            index = imageCounts - 1
-        }
-        
-        if images.count > 0 {
-            self.imageView.image = images[index]
-        }
-        else {
-            if let url = NSURL(string: imageURLStringGroup[index]) {
-                self.imageView .hu_setImageWithURL(url, placeholderImage: placeholderImage)
-            }
-        }
-        
-        addScrollAnimationWithDirection(.Right)
+        addScrollAnimationWithDirection(direction)
     }
     
     private func addScrollAnimationWithDirection(direction: ScrollDirection) {
