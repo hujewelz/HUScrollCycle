@@ -46,6 +46,6 @@ func scrollCycleView(view: HUScrollCycleView, didSelectedItemAtIndex index: Int)
 ![](http://i2.piimg.com/558621/208b98513be3f12e.png)
 # Other
 * `HUScrollCycle`中的网络图片下载并没有使用其他第三方库，所以你可以放心使用而不会对你项目产生影响。你只要按照上面的方法正确的导入`HUScrollCycle-Bridging-Header.h`就可以正常使用了。
-* `HUScrollCycle`是使用`Swift`版本，如果你需要`OC`版本可以联系我：）
+* `HUScrollCycle`是使用`Swift`开发的，如果你需要`OC`版本可以联系我：）
 
 
