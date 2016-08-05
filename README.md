@@ -1,5 +1,6 @@
 # HUScrollCycle
 一张图片实现的轮播图，支持网络图片
+
 ![](http://i2.piimg.com/558621/c2319232c1372ba6.gif)
 # Usage
 
