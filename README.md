@@ -1,6 +1,6 @@
 # HUScrollCycle
 一张图片实现的轮播图，支持网络图片 </br>
-![](http://i2.piimg.com/558621/c2319232c1372ba6.gif)
+![](https://github.com/hujewelz/HUScrollCycle/blob/master/screenshot.gif)
 # Usage
 
 ```swift
