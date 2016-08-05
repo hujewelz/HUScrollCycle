@@ -21,6 +21,10 @@
 		047F1EB31D50A946007808DE /* b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 047F1EAF1D50A946007808DE /* b.jpg */; };
 		047F1EB41D50A946007808DE /* c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 047F1EB01D50A946007808DE /* c.jpg */; };
 		047F1EB51D50A946007808DE /* d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 047F1EB11D50A946007808DE /* d.jpg */; };
+		04C9CB051D5420FB005C2794 /* HUPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9CAE11D5420FB005C2794 /* HUPhotoBrowser.m */; };
+		04C9CB061D5420FB005C2794 /* HUPhotoBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9CAE31D5420FB005C2794 /* HUPhotoBrowserCell.m */; };
+		04C9CB121D5420FB005C2794 /* HUToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9CAF81D5420FB005C2794 /* HUToast.m */; };
+		04C9CB171D5420FB005C2794 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9CB041D5420FB005C2794 /* UIView+frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,15 @@
 		047F1EAF1D50A946007808DE /* b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = b.jpg; sourceTree = "<group>"; };
 		047F1EB01D50A946007808DE /* c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c.jpg; sourceTree = "<group>"; };
 		047F1EB11D50A946007808DE /* d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d.jpg; sourceTree = "<group>"; };
+		04C9CADF1D5420FB005C2794 /* hu_const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hu_const.h; sourceTree = "<group>"; };
+		04C9CAE01D5420FB005C2794 /* HUPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPhotoBrowser.h; sourceTree = "<group>"; };
+		04C9CAE11D5420FB005C2794 /* HUPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUPhotoBrowser.m; sourceTree = "<group>"; };
+		04C9CAE21D5420FB005C2794 /* HUPhotoBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPhotoBrowserCell.h; sourceTree = "<group>"; };
+		04C9CAE31D5420FB005C2794 /* HUPhotoBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUPhotoBrowserCell.m; sourceTree = "<group>"; };
+		04C9CAF71D5420FB005C2794 /* HUToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUToast.h; sourceTree = "<group>"; };
+		04C9CAF81D5420FB005C2794 /* HUToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUToast.m; sourceTree = "<group>"; };
+		04C9CB031D5420FB005C2794 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		04C9CB041D5420FB005C2794 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +103,7 @@
 			children = (
 				047F1E891D50996D007808DE /* AppDelegate.swift */,
 				047F1E8B1D50996D007808DE /* ViewController.swift */,
+				04C9CADE1D5420FB005C2794 /* HUPhotoBrowser */,
 				046D9E641D518C0F00A9FFEC /* HUScrollCycleView */,
 				047F1E8D1D50996D007808DE /* Main.storyboard */,
 				047F1E901D50996D007808DE /* Assets.xcassets */,
@@ -117,6 +131,22 @@
 				046D9E6D1D51986D00A9FFEC /* UIImageView+HUWebImage.m */,
 			);
 			path = HUWebImageDownloader;
+			sourceTree = "<group>";
+		};
+		04C9CADE1D5420FB005C2794 /* HUPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				04C9CADF1D5420FB005C2794 /* hu_const.h */,
+				04C9CAE01D5420FB005C2794 /* HUPhotoBrowser.h */,
+				04C9CAE11D5420FB005C2794 /* HUPhotoBrowser.m */,
+				04C9CAE21D5420FB005C2794 /* HUPhotoBrowserCell.h */,
+				04C9CAE31D5420FB005C2794 /* HUPhotoBrowserCell.m */,
+				04C9CAF71D5420FB005C2794 /* HUToast.h */,
+				04C9CAF81D5420FB005C2794 /* HUToast.m */,
+				04C9CB031D5420FB005C2794 /* UIView+frame.h */,
+				04C9CB041D5420FB005C2794 /* UIView+frame.m */,
+			);
+			path = HUPhotoBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +181,7 @@
 				TargetAttributes = {
 					047F1E851D50996D007808DE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3XPYQ2S9HD;
 					};
 				};
 			};
@@ -198,8 +229,12 @@
 				047F1E8C1D50996D007808DE /* ViewController.swift in Sources */,
 				047F1E8A1D50996D007808DE /* AppDelegate.swift in Sources */,
 				046D9E701D51986D00A9FFEC /* UIImage+HUExtension.m in Sources */,
+				04C9CB061D5420FB005C2794 /* HUPhotoBrowserCell.m in Sources */,
 				047F1EAC1D5099FF007808DE /* HUScrollCycleView.swift in Sources */,
 				046D9E711D51986D00A9FFEC /* UIImageView+HUWebImage.m in Sources */,
+				04C9CB051D5420FB005C2794 /* HUPhotoBrowser.m in Sources */,
+				04C9CB121D5420FB005C2794 /* HUToast.m in Sources */,
+				04C9CB171D5420FB005C2794 /* UIView+frame.m in Sources */,
 				046D9E6E1D51986D00A9FFEC /* HUWebImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HUScrollCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hujewelz.HUScrollCycle;
@@ -327,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HUScrollCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hujewelz.HUScrollCycle;

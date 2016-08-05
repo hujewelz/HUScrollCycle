@@ -10,5 +10,6 @@
 #define HUScrollCycle_Bridging_Header_h
 
 #import "UIImageView+HUWebImage.h"
+#import "HUPhotoBrowser.h"
 
 #endif /* HUScrollCycle_Bridging_Header_h */

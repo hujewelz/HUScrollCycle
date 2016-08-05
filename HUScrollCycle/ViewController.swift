@@ -10,31 +10,39 @@ import UIKit
 
 class ViewController: UIViewController, HUScrollCycleViewDelegate {
 
+    let images = ["a.jpg", "b.jpg","c.jpg","d.jpg",].flatMap {
+        return UIImage(named: $0)
+    }
+    
+    let imageURLStrs = ["http://p.qq181.com/cms/1212/2012121221524127738.jpg",
+                        "http://img.pconline.com.cn/images/upload/upc/tx/photoblog/1503/17/c2/3974346_1426551981202_mthumb.jpg",
+                        "http://image.tianjimedia.com/uploadImages/2015/083/30/VVJ04M7P71W2.jpg",
+                        "http://img1.3lian.com/2015/a1/114/d/58.jpg"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let images = ["a.jpg", "b.jpg","c.jpg","d.jpg",].flatMap {
-//            return UIImage(named: $0)
-//        }
-        
         let cycleView = HUScrollCycleView(frame: CGRectMake(0, 64, self.view.frame.size.width, 200))
         self.view.addSubview(cycleView)
-        cycleView.delegate = self
-        //cycleView.images = images
+        cycleView.images = images
         cycleView.currentPageIndicatorTintColor = UIColor.redColor()
-        cycleView.placeholderImage = UIImage(named:"a.jpg")
-        cycleView.imageURLStringGroup = ["http://1.7feel.cc/yungou/statics/uploads/banner/20160715/85964915563838.jpg",
-                                         "http://1.7feel.cc/yungou/statics/uploads/banner/20160715/20274054563730.jpg",
-                                         "http://1.7feel.cc/yungou/statics/uploads/banner/20160715/40912708563719.jpg",
-                                         "http://1.7feel.cc/yungou/statics/uploads/touimg/20160718/img193.jpg"];
+        
+        let cycleView2 = HUScrollCycleView(frame: CGRectMake(0, 300, self.view.frame.size.width, 200))
+        self.view.addSubview(cycleView2)
+        cycleView2.delegate = self
+        cycleView2.currentPageIndicatorTintColor = UIColor.orangeColor()
+        cycleView2.autoScrollEnable = false
+        cycleView2.placeholderImage = UIImage(named:"a.jpg")
+        cycleView2.imageURLStringGroup = imageURLStrs
+
     }
 
     //MARK: HUScrollCycleViewDelegate
     
     func scrollCycleView(view: HUScrollCycleView, didSelectedItemAtIndex index: Int) {
-        print("tap at \(index)")
+        HUPhotoBrowser .showFromImageView(nil, withURLStrings: imageURLStrs, placeholderImage: UIImage(named: "a.jpg"), atIndex: index, dismiss: nil)
+        
     }
 
-    
 }
 
